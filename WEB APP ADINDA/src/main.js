@@ -13,32 +13,32 @@ const map = new Map({
   });
   
 //DATA GEOJSON
-const data = {
-  "type": "FeatureCollection",
-  "features": [
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "rgba(31, 24, 230, 1)",
-        "marker-size": "medium",
-        "marker-symbol": "home"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          107.6168514,
-          -6.8113845
-        ]
-      }
-    }
-  ]
-}
+//const data = {
+//  "type": "FeatureCollection",
+//  "features": [
+//    {
+//      "type": "Feature",
+//      "properties": {
+//        "marker-color": "rgba(31, 24, 230, 1)",
+//        "marker-size": "medium",
+//        "marker-symbol": "home"
+//      },
+//      "geometry": {
+//        "type": "Point",
+//        "coordinates": [
+//          107.6168514,
+//          -6.8113845
+//        ]
+//      }
+//    }
+//  ]
+//}
 
 map.on('load', () => {
 
 map.addSource('kota', {
     type: 'geojson',
-    data: data
+    data: tkp
   });
 
 map.addLayer({
