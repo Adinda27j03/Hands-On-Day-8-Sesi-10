@@ -1,5 +1,5 @@
 import { Map } from 'maplibre-gl';
-
+import dataTkp from "./data/tkpSoreang.geojson?url"
 const mapElement = document.createElement('div');
 mapElement.id = 'map';
 mapElement.style.height = '300px';
@@ -9,7 +9,7 @@ const map = new Map({
     container: 'map',
     style: "https://demotiles.maplibre.org/style.json",
     center: [107.61692866605371, -6.81381784164011],
-    zoom: 5
+    zoom: 9
   });
   
 //DATA GEOJSON
@@ -38,7 +38,7 @@ map.on('load', () => {
 
 map.addSource('kota', {
     type: 'geojson',
-    data: tkp
+    data: dataTkp
   });
 
 map.addLayer({
