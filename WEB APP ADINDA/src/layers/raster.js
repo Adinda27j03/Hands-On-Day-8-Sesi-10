@@ -1,16 +1,17 @@
-
+import dataRaster from "../data/kabBandung.jpg?url"
 
 
 export function addRasterLayer(map){
 //LAYER RASTER 
  map.addSource("soreang", {
     type: "image",
-    url: "https://upload.wikimedia.org/wikipedia/commons/3/37/Peta_Kecamatan_Soreang.jpg",
+    url: dataRaster,
+   
     coordinates: [
-      [79.16, -0.40], // top-left
-      [94.18, -1.66], // top-right
-      [94.65, -14.73], // bottom-right
-      [72.97, -13.74] // bottom-left
+    [107.53084916574922, -7.054700],   // top-left 
+    [107.56809968337066, -7.054700],   // top-right 
+    [107.56809968337066, -7.068200],   // bottom-right 
+    [107.53084916574922, -7.068200]    // bottom-left 
     ]
   });
 
