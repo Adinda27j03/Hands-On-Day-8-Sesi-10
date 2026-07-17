@@ -10,7 +10,7 @@ import { addTKPLayer , addKecLayer} from './layers/vector';
 import { addRasterLayer } from './layers/raster';
 import { addAttribution } from './controls/basicControls';
 import { LogoJabarControl } from './controls/customLogoControls'
-
+import { addDataPopup } from './popups/layerPopups';
 
 const mapElement = document.createElement('div');
 mapElement.id = 'map';
@@ -53,6 +53,11 @@ map.on('load', () => {
   addTKPLayer(map);
 });
 
+map.on("click", "titik-tkp", function(event){
+  addDataPopup(map, event);
+})
+
+map.doubleClickZoom.disable();
 
 // Controls setting
 addAttribution(map);
