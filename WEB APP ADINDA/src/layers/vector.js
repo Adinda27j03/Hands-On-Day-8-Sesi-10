@@ -3,15 +3,15 @@ import dataTkp from "../data/tkpSoreang.geojson?url"
 
 export function addKecLayer(map){
 //LAYER VECTOR POLYGON
-map.addSource('pulau', {
+map.addSource('kecamatan', {
     type: "geojson",
     data: soreang
   });
 
 map.addLayer({
-    id: "area-pulau",
+    id: "area-kecamatan",
     type: "fill",
-    source: "pulau",
+    source: "kecamatan",
     paint: {
         "fill-color": "orange",
         "fill-outline-color": "black"
