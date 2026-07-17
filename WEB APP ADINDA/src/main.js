@@ -9,6 +9,8 @@ import 'maplibre-gl/dist/maplibre-gl.css';
 import { addTKPLayer , addKecLayer} from './layers/vector';
 import { addRasterLayer } from './layers/raster';
 import { addAttribution } from './controls/basicControls';
+import { LogoJabarControl } from './controls/customLogoControls'
+
 
 const mapElement = document.createElement('div');
 mapElement.id = 'map';
@@ -57,3 +59,4 @@ addAttribution(map);
 map.addControl(new FullscreenControl())
 map.addControl(new GlobeControl())
 map.addControl(new LogoControl({compact: false}))
+map.addControl(new LogoJabarControl(), "top-left")
