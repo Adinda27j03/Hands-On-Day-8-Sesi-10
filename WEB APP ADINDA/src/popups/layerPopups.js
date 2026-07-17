@@ -8,7 +8,7 @@ export function addDataPopup(map, event){
     const latitude = coordinate.lat.toFixed(2)
 
     const properties = event.features[0].properties
-    const tkpName = properties.NAME
+    const tkpName = properties.NO_TINDAK_PIDANA_ALAMAT
 
     console.log(properties)
 
