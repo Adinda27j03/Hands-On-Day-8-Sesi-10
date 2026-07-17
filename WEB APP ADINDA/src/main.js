@@ -1,7 +1,10 @@
 import { 
   Map,
- 
+  FullscreenControl,
+  GlobeControl,
+  LogoControl
 } from 'maplibre-gl';
+
 import 'maplibre-gl/dist/maplibre-gl.css';
 import { addTKPLayer , addKecLayer} from './layers/vector';
 import { addRasterLayer } from './layers/raster';
@@ -48,4 +51,9 @@ map.on('load', () => {
   addTKPLayer(map);
 });
 
+
+// Controls setting
 addAttribution(map);
+map.addControl(new FullscreenControl())
+map.addControl(new GlobeControl())
+map.addControl(new LogoControl({compact: false}))
