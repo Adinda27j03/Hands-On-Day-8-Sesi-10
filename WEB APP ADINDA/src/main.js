@@ -1,7 +1,11 @@
-import { Map } from 'maplibre-gl';
-
+import { 
+  Map,
+ 
+} from 'maplibre-gl';
+import 'maplibre-gl/dist/maplibre-gl.css';
 import { addTKPLayer , addKecLayer} from './layers/vector';
 import { addRasterLayer } from './layers/raster';
+import { addAttribution } from './controls/basicControls';
 
 const mapElement = document.createElement('div');
 mapElement.id = 'map';
@@ -12,7 +16,8 @@ const map = new Map({
     container: 'map',
     style: "https://demotiles.maplibre.org/style.json",
     center: [107.51969117520541, -7.03375223175306],
-    zoom: 11
+    zoom: 11,
+    attributionControl: false
   });
   
 //DATA GEOJSON
@@ -42,3 +47,5 @@ map.on('load', () => {
   addKecLayer(map);
   addTKPLayer(map);
 });
+
+addAttribution(map);
