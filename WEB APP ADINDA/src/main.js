@@ -12,6 +12,7 @@ import { addAttribution } from './controls/basicControls';
 import { LogoJabarControl } from './controls/customLogoControls'
 import { addDataPopup } from './popups/layerPopups';
 import { storeAreaGeometry } from './engine/areaTool';
+import { storeBufferGeometry } from './engine/bufferTool';
 
 const mapElement = document.createElement('div');
 mapElement.id = 'map';
@@ -55,7 +56,8 @@ map.on('load', () => {
 });
 
 map.on("click", "titik-tkp", function(event){
-  addDataPopup(map, event);
+  //addDataPopup(map, event);
+  storeBufferGeometry(map, event)
 })
 
 map.doubleClickZoom.disable();
