@@ -18,5 +18,9 @@ async function computeArea(wkt){
 
     const result = await response.json()
 
+    const output = document.getElementById("luas");
+    output.textContent = `${result.area_ha.toLocaleString("ID-id")} ${result.unit}`
+
+
     return result
 }
